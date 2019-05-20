@@ -10,6 +10,9 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var referrals = require('./routes/referrals');
+var automation = require('./routes/automation');
+var perks = require('./routes/perks');
 
 var config = require('./config');
 
@@ -81,6 +84,10 @@ passport.deserializeUser(function(obj, done) {
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/referrals', referrals);
+app.use('/automation', automation);
+app.use('/perks', perks);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

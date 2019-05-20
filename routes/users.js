@@ -59,7 +59,6 @@ router.get('/', function (req, res) {
             }
           }
 
-          // TODO: do we really need to wrap it as an array again?
           listOfUsers.push(userProperties);
         });
 
